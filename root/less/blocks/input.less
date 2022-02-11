@@ -1,0 +1,39 @@
+.input {
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #9f9f9f;
+  width: 100%;
+  height: 40px;
+  padding-top: 34px;
+  padding-bottom: 10px;
+  vertical-align: bottom;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (min-width: @desktop-width) {
+    height: 48px;
+  }
+}
+
+.input__case {
+  height: 50px;
+  appearance: none;
+  background-color: transparent;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.input__case, .form-basket__item-select:after {
+  grid-area: select;
+}
+
+.input__case-font {
+  color: #9f9f9f;
+}
+

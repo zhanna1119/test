@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header wrapper">
+        <div class="header__logo">
+            <a class="header__logo-link" href="#" aria-label="логотип компании">
+              <picture>
+                <source media="(min-width: 1920px)" srcset="img/logo-max.svg">
+                <img src="img/logo.svg" width="77" height="24" alt="логотип">
+              </picture>
+            </a>
+        </div>
+        <nav class="header__nav">
+        <div class="header__user">
+            <ul class="header__user-list">
+                <li class="header__user-item">
+                    <a class="header__user-link header__user-link--icon-search header__user-link-search" href="#" aria-label="поле поиска">Поиск</a>
+                </li>
+                <li class="header__user-item">
+                    <a class="header__user-link header__user-link--icon-user" href="#" aria-label="профиль пользователя">
+                    </a>
+                </li>
+                <li class="header__user-item">
+                    <a class="header__user-link header__user-link--icon-like" href="#" aria-label="избранное"></a>
+                </li>
+                <li class="header__user-item">
+                    <a class="header__user-link header__user-link--icon-basket" href="#" aria-label="корзина"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" aria-label="страница 1">Страница 1</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" aria-label="страница 2">Страница 2</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" aria-label="страница 3">Страница 3</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" aria-label="страница 4">Страница 4</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" aria-label="страница 5">Страница 5</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" aria-label="страница 6">Страница 6</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <div class="breadcrumbs">
+            <a class="breadcrumbs__link" href="#">Главная</a>
+            <span class="breadcrumbs__separator">/</span>
+            <a class="breadcrumbs__link--current" href="#">Корзина</a>
+        </div>
+    </header>
+    <main>
+        <section class="basket">
+          <div class="wrapper">
+            <h1 class="basket__title">Корзина</h1>
+            <div class="basket__autorize">
+              <p class="basket__text">Есть аккаунт?</p>
+              <a class="basket__link" href="#" aria-label="авторизация">Войти</a>
+            </div>
+          </div>
+          <form class="form-basket wrapper" method="post">
+                  <div class="form-basket__item ">
+                    <input class="input" type="text" name="adress" id="adress" size="100" required value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152">
+                    <label class="label" for="adress">Адрес</label>
+                 </div>
+                 <div class="form-basket__item form-basket__item-map">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c69501f5e9f8bb35552e6062d3a799e1d7f74d04803d0972914e0f2c9d80858&amp;source=constructor"
+                    width="287" height="220" frameborder="0"></iframe>
+                 </div>
+                 <div class="form-basket__item-half-wrapper">
+                  <div class="form-basket__item form-basket__item-half">
+                    <input class="input" type="text" name="name" id="name" required>
+                    <label class="label" for="name">Ваше Имя</label>
+                  </div>
+                  <div class="form-basket__item form-basket__item-half">
+                    <input class="input" type="tel" name="phone" id="phone" required>
+                    <label class="label" for="phone">Ваш Телефон</label>
+                  </div>
+                  </div>
+                  <div class="form-basket__item">
+                    <input class="input" type="email" name="email" id="email" required>
+                    <label class="label" for="email">Ваш Email</label>
+                  </div>
+                  <div class="form-basket__item form-basket__item-select">
+                    <select class="input input__case" id="case" required>
+                        <option class="input__case-font" value="без упаковки">Без упаковки</option>
+                        <option class="input__case-font" value="стандартная">Стандартная</option>
+                        <option class="input__case-font" value="праздничная">Праздничная</option>
+                    </select>
+                    <label class="label" for="case">Тип упаковки</label>
+                </div>
+                  <div class="form-basket__item">
+                    <input class="input" type="text" id="comment" name="comment" required>
+                    <label class="label" for="comment">Введите комментарий</label>
+                  </div>
+          </form>
+        </section>
+        <section class="product wrapper">
+            <h2 class="product__title">Выбранные товары:</h2>
+            <div class="product__wrapper">
+                <div class="product__card">
+                    <div class="product__card-img">
+                        <picture>
+                            <source media="(min-width: 1920px)"
+                              srcset="img/product-max.jpg 1x, img/product-max@2x.jpg 2x">
+                            <img src="img/product.jpg" width="80" height="80" srcset="img/product@2x.jpg 2x" alt="фото товара">
+                        </picture>
+                    </div>
+                    <div class="product__card-container">
+                        <div class="product__card-content">
+                          <p class="product__card-title">Товар 1</p>
+                          <p class="product__card-text">Описание товара, которое может быть длинным</p>
+                          <div class="product__card-btn__wrapper">
+                            <button class="product__card-btn product__card-btn--minus" type="button"></button>
+                            <span class="product__card-number">1</span>
+                            <button class="product__card-btn product__card-btn--plus" type="button"></button>
+                        </div>
+                        </div>
+                        <div class="product__card-content">
+                          <span class="product__card-price">1090 руб.</span>
+                          <button class="product__card-delete" type="reset">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-img">
+                        <picture>
+                            <source media="(min-width: 1920px)" srcset="img/product-max.jpg 1x, img/product-max@2x.jpg 2x">
+                            <img src="img/product.jpg" width="80" height="80" srcset="img/product@2x.jpg 2x" alt="фото товара">
+                        </picture>
+                    </div>
+                    <div class="product__card-container">
+                        <div class="product__card-content">
+                          <p class="product__card-title">Товар 2</p>
+                          <p class="product__card-text">Описание товара, которое может быть очень-очень длинным</p>
+                          <div class="product__card-btn__wrapper">
+                            <button class="product__card-btn product__card-btn--minus" type="button"></button>
+                            <span class="product__card-number">1</span>
+                            <button class="product__card-btn product__card-btn--plus" type="button"></button>
+                          </div>
+                        </div>
+                        <div class="product__card-content">
+                          <span class="product__card-price">700 руб.</span>
+                          <button class="product__card-delete" type="reset">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__card">
+                    <div class="product__card-img">
+                        <picture>
+                            <source media="(min-width: 1920px)" srcset="img/product-max.jpg 1x, img/product-max@2x.jpg 2x">
+                            <img src="img/product.jpg" width="80" height="80" srcset="img/product@2x.jpg 2x" alt="фото товара">
+                        </picture>
+                    </div>
+                    <div class="product__card-container">
+                        <div class="product__card-content">
+                          <p class="product__card-title">Товар 3</p>
+                          <p class="product__card-text">Короткое описание товара</p>
+                          <div class="product__card-btn__wrapper">
+                            <button class="product__card-btn product__card-btn--minus" type="button"></button>
+                            <span class="product__card-number">2</span>
+                            <button class="product__card-btn product__card-btn--plus" type="button"></button>
+                          </div>
+                        </div>
+                        <div class="product__card-content">
+                          <span class="product__card-price">2000 руб.</span>
+                          <button class="product__card-delete" type="reset">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__card-total">
+                  <div class="product__card-total-conent">
+                    <p class="product__card-result">Итог:</p>
+                    <span class="product__card-sum">3790 руб.</span>
+                  </div>
+                    <button class="button" type="submit" id="btn">Купить</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
